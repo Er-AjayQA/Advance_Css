@@ -1,0 +1,95 @@
+/* ***************************
+      BUTTONS
+*************************** */
+
+.btn {
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: $default-font-size;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s;
+  }
+  &:hover {
+    transform: translatey(-3px);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+    &::after {
+      -webkit-transform: scaleX(1.4) scaleY(1.6);
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    transform: translatey(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-gray-dark;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &::after {
+      background-color: $color-primary;
+    }
+  }
+}
+
+.btn-text:link,
+.btn-text:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: $color-primary;
+  font-size: $default-font-size;
+  padding: 3px;
+  border-bottom: 1px solid $color-primary;
+  transition: all 0.2s;
+
+  &:hover {
+    color: $color-white;
+    background-color: $color-primary;
+    transform: translateY(-2px);
+    -webkit-box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+  }
+
+  &:active {
+    transform: translateY(0);
+    -webkit-box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+  }
+}

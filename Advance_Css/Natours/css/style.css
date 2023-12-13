@@ -576,6 +576,27 @@ body {
     padding-top: 2rem;
     float: right; }
 
+.navigation {
+  position: relative; }
+  .navigation__button {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    background-color: #fff;
+    z-index: 10001; }
+  .navigation__background {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    background-image: radial-gradient(#7ed56f, #28b485);
+    z-index: 10000; }
+
 .section-about {
   background-color: #f7f7f7;
   padding: 25rem 0;

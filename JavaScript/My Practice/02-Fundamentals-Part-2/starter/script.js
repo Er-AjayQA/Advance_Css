@@ -359,4 +359,106 @@ for (let count = 0; count < friends.length; count++) {
 /*********************************************
     "LOOPING ARRAYS, BREAKING AND CONTINUING"
  *********************************************/
-console.log("Looping Arrays, Breaking And Continuing :-");
+/*console.log("Looping Arrays, Breaking And Continuing :-");
+
+// Case 1
+// const myInfo = ["Ajay", "Kumar", 1993, 30, "Tester"];
+// const type = [];
+// for (let i = 0; i <= myInfo.length - 1; i++) {
+//   if (i <= 2) {
+//     console.log(myInfo[i]);
+//     type.push(typeof myInfo[i]);
+//   } else {
+//     break;
+//   }
+//   // type[i] = typeof myInfo[i];
+// }
+// console.log(type);
+
+// Case 2
+// const years = [1991, 1992, 1987, 2002, 1967];
+// const currentYear = 2023;
+// const ages = [];
+
+// const age = (year) => {
+//   return currentYear - year;
+// };
+// for (let i = 0; i <= years.length - 1; i++) {
+//   // ages[i] = age(years[i]);
+//   ages.push(age(years[i]));
+// }
+// console.log(ages);
+
+// const myInfo = ["Ajay", "Kumar", 1993, 30, "Tester"];
+// Continue Statement
+
+// for (let i = 0; i <= myInfo.length - 1; i++) {
+//   if (typeof myInfo[i] === "number") {
+//     continue;
+//   }
+//   console.log(myInfo[i]);
+// }
+
+// Break Statement
+// for (let i = 0; i <= myInfo.length - 1; i++) {
+//   if (typeof myInfo[i] === "number") {
+//     break;
+//   } else {
+//     console.log(myInfo[i]);
+//   }
+// }*/
+
+/*********************************************
+    "LOOPING BACKWARDS AND LOOPS IN LOOP"
+ *********************************************/
+/*console.log("Looping Backwards and Loops In Loop :-");
+
+// const myInfo = [
+//   "Ajay",
+//   "Kumar",
+//   1993,
+//   30,
+//   "Tester",
+//   ["Rajeev", "Komal", "Poonam", "Happy"],
+// ];
+
+// Backward Iteration
+// for (let i = myInfo.length - 1; i >= 0; i--) {
+//   console.log(myInfo[i], typeof myInfo[i]);
+// }
+
+// Loops Inside the Loop
+// for (let i = 1; i <= 3; i++) {
+//   console.log(`Starting Excercise ${i} :-`);
+//   for (let j = 1; j <= 5; j++) {
+//     console.log(`Rep ${j}`);
+//   }
+// }*/
+
+/*********************************************
+    "THE WHILE LOOP"
+ *********************************************/
+console.log("The While Loop :-");
+
+// For Loop
+// for (let i = 1; i <= 10; i++) {
+//   console.log(`For Loop ${i} :-`);
+// }
+
+// While Loop
+// let i = 1;
+// while (i <= 10) {
+//   console.log(`While Loop ${i} :-`);
+//   i++;
+// }
+
+// Roll Dice
+let diceCount = Math.trunc(Math.random() * 6) + 1;
+while (diceCount !== 6) {
+  console.log(diceCount);
+  diceCount = Math.trunc(Math.random() * 6) + 1;
+  if (diceCount === 6) {
+    console.log(diceCount);
+    console.log("Loop is about to end!.");
+  }
+}

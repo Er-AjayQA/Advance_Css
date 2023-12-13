@@ -6,6 +6,7 @@
   box-shadow: $shadow-2;
   font-size: $default-font-size;
   transform: skewX(-12deg);
+  background-color: rgba($color-white, 0.6);
 
   &__shape {
     width: 15rem;
@@ -22,6 +23,8 @@
   &__img {
     height: 100%;
     transform: translateX(-4rem) scale(1.4);
+    transition: all 0.5s;
+    backface-visibility: hidden;
   }
 
   &__text {
@@ -36,6 +39,19 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, 20%);
+    opacity: 0;
+    backface-visibility: hidden;
+    transition: all 0.5s;
+  }
+
+  &:hover &__caption {
     transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+
+  &:hover &__img {
+    filter: blur(3px) brightness(80%);
+    transform: translateX(-4rem) scale(1);
   }
 }
